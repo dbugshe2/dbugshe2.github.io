@@ -1555,11 +1555,11 @@
 	}
 
 	body, input, select, textarea {
-		color: #888;
+		color: #333;
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
-		line-height: 1.75em;
+		line-height: 1.85em;
 	}
 
 	a {
@@ -1602,7 +1602,11 @@
 			color: inherit;
 			text-decoration: none;
 		}
-
+	h1{
+		font-size: 2.5em;
+		line-height: 1.5em;
+	}
+	
 	h2 {
 		font-size: 2em;
 		line-height: 1.5em;

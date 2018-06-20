@@ -17,11 +17,11 @@
   gtag('config', 'UA-112029391-2');
 </script>
 
-        <title>How to Deploy Lektor Website to Github Pages using Travis CI - Maroof's Hello World</title>
+        <title>How to Host a free static personal website on Github with Python, Lektor and Travis CI - Maroof's Hello World</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="../../static/js/ie/html5shiv.js?h=6ee35415"></script><![endif]-->
-        <link rel="stylesheet" href="../../static/css/main.css?h=d54cd6d4" />
+        <link rel="stylesheet" href="../../static/css/main.css?h=5de49f80" />
         <!--[if lte IE 8]><link rel="stylesheet" href="../../static/css/ie8.css?h=78470c88" /><![endif]-->
     </head>
     <body>
@@ -66,25 +66,76 @@
   
   <div class="blog-post">
   
-    <h2>How to Deploy Lektor Website to Github Pages using Travis CI</h2>
+    <h2>How to Host a free static personal website on Github with Python, Lektor and Travis CI</h2>
   
   <p class="meta">
     written by
     
-      <a href="https://twitter.com/maroofshittu">Maroof (dbugshe2)</a>
+      <a href="https://twitter.com/maroofshittu">Maroof Shittu (dbugshe2)</a>
     
-    on 
+    on 2018-06-21
   </p>
+   <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_pocket"></a>
+<a class="a2a_button_reddit"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+  <hr>
   <h2>Table Of Content</h2>
 <hr>
 <ul>
-<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/">what is Lektor</a></li>
-<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/">what is Travis CI</a></li>
-<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/">Prerequisites</a></li>
-<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/">Getting started</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#what-is-lektor">what is Lektor</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#what-is-travis-ci">what is Travis CI</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#pre-requisites">Pre-requisites</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#getting-started-enviroment-and-setup">Getting started - Environment and setup</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#setting-up-github-pages">Setting up Github Pages</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#installing-and-starting-lektor">installing and starting Lektor</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#templates-and-customization">Templates and customization</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#adding-content">Adding Content</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#building-and-deploying">Building and deploying</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#briefest-introduction-to-travis-ci">Briefest introduction to Travis CI</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#activating-travis-for-our-repository">Activating Travis for our repository</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#configuring-travis-to-build-and-deploy-our-site">Configuring Travis to build and deploy our site</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#first-we-commit-then-we-push">First we commit, then we push</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#fingers-crossed">Fingers Crossed</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#the-pros">The Pros</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#the-cons">The Cons</a></li>
+<li><a href="../../blog/how-to-deploy-lektor-website-to-github-pages-using-travis-ci/#conclusion">Conclusion</a></li>
 </ul>
 <hr>
-<p>the end</p>
+<h1><a id="what-is-lektor">What is Lektor</a></h1>
+<hr>
+<p>If you are familiar with static site generators then the idea of lektor won't be a new one to you, but  <a href="https://www.getlektor.com/">Lektor</a> stands out because it emphasises on also being a content management system, CMS(s) are  very popular even among non developers or programmers, because of their ease of use and accesibility, lektor tries to bring this accesibility and ease through its admin interface which makes managing the content of your static website, as easy and quick as if you were using a CMS like wordpress, for people who do not want to make a compromise between a CMS and a static blog engine lektor provides a middle ground.</p>
+<h3>the main features of lektor inlude but are not limited to</h3>
+<ul>
+<li>Static site generation - The site generated by lektor is completely static site, meaning no back software or databases, your </li>
+</ul>
+<h1><a id="what-is-travis-ci">What is Travis CI</a></h1>
+<hr>
+<p>if you are not familiar with CI or Continuous Integration you might not get why you need a platform like Travis CI, I recommend reading this short</p>
+<p>Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub.</p>
+<h1><a id="pre-requisites">Pre-requisites</a></h1>
+<hr>
+<h1>Getting Started - Environment and setup</h1>
+<h1><a id="settig-up-github-pages">Setting up Github Pages</a></h1>
+<h1><a id="installing-and-starting-lektor">installing and starting Lektor</a></h1>
+<h1><a id="templates-and-customization">Templates and customization</a></h1>
+<h1><a id="adding-content">Adding Content</a></h1>
+<h1><a id="building-and-deploying">Building and deploying</a></h1>
+<h1><a id="briefest-introduction-to-travis-ci">Briefest introduction to Travis CI</a></h1>
+<h1><a is="activating-travis-for-our-repository">Activating Travis for our repository</a></h1>
+<h1><a id="configuring-travis-to-build-and-deploy-our-site">Configuring Travis to build and deploy our site</a></h1>
+<h1><a id="first-we-commit-then-we-push">First we commit, then we push</a></h1>
+<h1><a id="fingers-crossed">Fingers Crossed</a></h1>
+<h1><a id="the-pros">The Pros</a></h1>
+<h1><a id="the-cons">The Cons</a></h1>
+<h1><a id="conclusion">Conclusion</a></h1>
 
   </div>
 
